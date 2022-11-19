@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <div id="caixaA">Olá</div>
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        let caixaA = $('#caixaA');
+        // A função acima substitui: caixa caixaA = document.getElementById('caixaA');
+        caixaA.hide();
+        caixaA.show(2000);
+        caixaA.hide(1000, function(){
+            caixaA.html("Todo bem?")
+        })
+        
+        caixaA.show(1500);
+        caixaA.animate({
+            width: "70%",
+            opacity: 0.4,
+            marginLeft: "0.6in",
+            fontSize: "3em",
+            borderWidth: "10px"
+        }, 1500);
+        caixaA.fadeOut(2000, function(){
+            caixaA.html("jQuery é legal!")
+        });       
+        caixaA.fadeIn(2000);
+        caixaA.animate({
+            width: "50%",
+            opacity: 1,
+            marginLeft: "0.6in",
+            fontSize: "2em",
+            borderWidth: "10px"
+        }, 1500);
+        caixaA.slideUp(2000, function(){
+            caixaA.html("Obrigado pela Aula!!!")
+        });
+        caixaA.slideDown(2000);
+    </script>
+</body>
+</html>
